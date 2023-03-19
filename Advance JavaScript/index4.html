@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
+    </ul> -->
+
+
+
+    <!-- beforebegin -->
+    <div id="intro"> <!-- Selected -->
+        <!-- afterbegin -->
+        <h2>Heading</h2>
+        <p>This is a p tag</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+
+    <script>
+
+        /*
+        //*********************** Remove Child Element *******************
+        let parent = document.getElementById("menu");
+
+        let elm = parent.firstElementChild.nextElementSibling;
+        console.log(elm);
+
+        // parent.removeChild(elm); //removing the product
+
+        // document.body.removeChild(parent); // removing ul
+
+
+        //******************* Clone Element ******************************
+
+        let menu = document.getElementById("menu");
+
+        let cloneElm = menu.cloneNode(true);
+
+        console.log(cloneElm);
+
+        // document.body.insertBefore(cloneElm, menu);
+
+        cloneElm.id = "id-remove";
+
+        document.body.appendChild(cloneElm);
+
+
+        //********************* Replace Element ***************************
+        
+        let item = document.createElement("li");
+        item.textContent = "Services";
+
+        let replace = parent.firstElementChild.nextElementSibling;
+
+        parent.replaceChild(item, replace);
+
+        */
+
+
+        //********************* Insert AdjacentHTML *****************************
+
+        let elm = document.getElementById("intro");
+        let html = "<h1>New h1</h1>";
+
+        elm.insertAdjacentHTML('beforebegin', html);
+        elm.insertAdjacentHTML('afterbegin', html);
+        elm.insertAdjacentHTML('beforeend', html);
+        elm.insertAdjacentHTML('afterend', html);
+
+    
+
+    </script>
+</body>
+</html>

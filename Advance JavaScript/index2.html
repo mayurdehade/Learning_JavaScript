@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Elements</title>
+    
+</head>
+<body>
+    
+    <h1>Heading Tag</h1>
+    <ul id="parent">
+        <li id="intro">List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+    </ul>
+
+    <ul>
+        <li>List A</li>
+        <li id="sib">List B</li>
+        <li>List C</li>
+        <li>List D</li>
+    </ul>
+
+    <div id="intro2">
+        <p>Hello this is a p tag</p>
+    </div>
+
+    <script>
+        /*
+        // ************************* Traversing Elements *************************
+        let elm = document.getElementById("intro");
+        console.log(elm);
+
+        //selecting the parent of the intro id
+        let prt = elm.parentElement;
+        console.log(prt);
+
+        // prt.innerHTML = "Hello";
+
+        //selectring the childrent using parent id
+        let parent = document.getElementById("parent");
+
+        //selecting the first child element
+        let node = parent.firstElementChild;
+        console.log(node);
+
+        //selecting the last child element
+        let node2 = parent.lastElementChild;
+        console.log(node2);
+
+        //selecting all the childs
+        let allChild = parent.children;
+        console.log(allChild);
+
+
+        //selecting the siblings (same order)
+        let elm2 = document.getElementById("sib");
+
+        let sib = elm2.previousElementSibling;
+        console.log(sib);
+
+        let sib2 = elm2.nextElementSibling;
+        console.log(sib2);
+        */
+
+        
+        // **************************** Manupulating Element *********************
+        let elm3 = document.getElementById("intro2");
+        
+        //fetching the content of the element
+        let content = elm3.innerHTML;
+        console.log(content);
+
+        //chnaging the content of the element
+        elm3.innerHTML = "Hello this is the changed content";
+
+
+    </script>
+</body>
+</html>

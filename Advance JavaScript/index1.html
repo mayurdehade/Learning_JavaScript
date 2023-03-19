@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements</title>
+</head>
+<body>
+    
+    <ul>
+        <li id="list1" class="cl">List 1</li>
+        <li id="list2">List 2</li>
+        <li id="list3" class="cl pi">List 3</li>
+    </ul>
+
+
+    <h2>Heading 1</h2>
+    <p>Paragraph 1</p>
+    <h2>Heading 2</h2>
+    <p>Paragraph 2</p>    
+    <h2>Heading 3</h2>
+    <p>paragraph 3</p>
+
+    <div id="div1">
+        <h2>New Headings inside Div</h2>
+        <p>New paragram inside Div</p>
+        <h2>New Headings inside Div</h2>
+        <p>New paragram inside Div</p>
+        <h2>New Headings inside Div</h2>
+        <p>New paragram inside Div</p>
+        <h2>New Headings inside Div</h2>
+        <p>New paragram inside Div</p>
+    </div>
+
+    <h3 class="intro">Heading tag 3 with intro class</h3>
+    <p class="intro">P tag with intro class</p>
+    <h3 class="intro"> Heading tag 3 with intro class</h3>
+    <p class="intro">P tag with intro class</p>
+    <h3 class="intro"> Heading tag 3 with intro class</h3>
+    <p class="intro">P tag with intro class</p>
+    <h3 class="intro"> Heading tag 3 with intro class</h3>
+
+    <!--JavaScipt-->
+    <script>
+        /*
+        //********************* select single element by id *********************
+        let nlist = document.getElementById("list2");
+        console.log(nlist);
+        //innerHTML perform the two task get text and change text
+        console.log(nlist.innerHTML); //output List 2
+        nlist.innerHTML = "New Text";
+        nlist.innerHTML = "<b> New Bold Text <b>";
+
+        //if the any id, class not available then it return 'null'
+        let nlist2 = document.getElementById("list4");
+        console.log(nlist2);
+
+        //direct without storing
+        //document.getElementById("list2").innerHTML = 'New List Item';
+
+
+        // ******************** selecting multiple element by class name ********************
+        let elm = document.getElementsByClassName('cl'); //this is the collection of the elements 
+        console.log(elm);
+        console.log(elm.length);
+
+        //we cannot change the innter html directly by using inner html this is the collection acts like array
+        //using loop for changing the innerHTML
+        for(let i=0; i<elm.length; i++) {
+            elm[i].innerHTML = "<p> Hello </p>";
+        }
+
+        // elm[1].innerHTML = "<b> Bold Hello </b>"; //this is also work (we can access the element like array)
+
+        let elm2 = document.getElementsByClassName('cl pi'); //selected that element which have the both cl and pi class
+        // elm2[0].innerHTML = "Chnaged Element";
+
+
+        // ************************* Selecting multiple elements by tag name *************************
+
+        let elm3 = document.getElementsByTagName("h2");
+        for(let i=0; i<elm3.length; i++) {
+            elm3[i].innerHTML = " Hello ";
+        }
+
+        //selecting element which is inside the div1 by tag name
+        let div1 = document.getElementById("div1");
+        let divelm = div1.getElementsByTagName("h2");
+
+        let j=0;
+        while(j<divelm.length){
+            divelm[j].innerHTML = "Chnaged Text of Paragraph Tag";
+            j++;
+        }
+
+        */
+
+        // *********************** Query Selector (Select element like CSS selectors) ***********************
+        //query selector is a very powerfull selector
+
+        let queryElm = document.querySelector("p.intro");
+        //it select the first element which satisfy the selection condition
+
+        console.log(queryElm);
+        queryElm.innerHTML = "New Text Upadate using querySelector.";
+
+
+        let queryElm2 = document.querySelectorAll("h3.intro");
+        //selected the element which have the h3 with intro class
+        //it selects the all element which satisfy the selection condition
+        //the all the element is stored into the nodelist
+        //we manipulate elements using the indexing
+
+        console.log(queryElm2);
+        
+        let k=0;
+        do{
+            queryElm2[k].innerHTML = k+1;
+            k++;
+        } while(k<queryElm2.length);
+
+
+    </script>
+</body>
+</html>
